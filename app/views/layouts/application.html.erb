@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+<<<<<<< HEAD
     <title><%= full_title(yield(:title)) %></title>
     <%= stylesheet_link_tag "application", media: "all",
                                            "data-turbolinks-track" => true %>
@@ -14,5 +15,19 @@
       <%= yield %>
       <%= render 'layouts/footer' %>
     </div>
+=======
+    <title><%= full_title (yield(:title)) %></title>
+    
+    
+    <%= stylesheet_link_tag    "application", media: "all",
+                                              "data-turbolinks-track" => true %>
+    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+
+  <%= yield %>
+
+>>>>>>> 6666c3029104783033bed12de542ef846ffb898f
   </body>
 </html>
