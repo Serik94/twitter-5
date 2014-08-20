@@ -3,8 +3,9 @@ Rails.application.routes.draw do
   get 'users/show'
   
   match '/signup', to: 'users#new', via: :get
-  get '/signin', to: 'sessions#new'
-  match '/signout', to: 'sessions#destroy', via: 'delete'
+  
+  match '/signin', to: 'sessions#new', via: :get
+  match '/signout', to: 'sessions#destroy', via: :delete
 
   
   root 'static_pages#home'
@@ -14,7 +15,7 @@ Rails.application.routes.draw do
   match 'contact', to: 'static_pages#contact', via: :get
   
   resources :sessions, only: [:new, :create, :destroy]
-  resources :microposts
+  resources :microposts, only: [:create, :destroy]
   resources :users
 
 end
